@@ -2,135 +2,138 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Afya RDC</title>
-  <link rel="stylesheet" href="style.css"/>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #f2f6ff;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f8fb;
       color: #333;
     }
 
     header {
-      background-color: #007BFF;
+      background-color: #0057a8;
       color: white;
-      padding: 1.5rem 1rem;
-      text-align: center;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     header h1 {
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      font-style: italic;
-      font-size: 1rem;
-    }
-
-    nav {
-      background-color: #0056b3;
-      display: flex;
-      justify-content: center;
-      padding: 0.5rem 0;
+      margin: 0;
+      font-size: 1.5rem;
     }
 
     nav a {
       color: white;
+      margin-left: 1.5rem;
       text-decoration: none;
-      margin: 0 1rem;
-      padding: 0.5rem;
-      transition: background 0.3s;
+      font-weight: bold;
     }
 
     nav a:hover {
-      background-color: #004080;
-      border-radius: 5px;
+      text-decoration: underline;
     }
 
-    main {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem;
+      background-color: #e8f0fe;
     }
 
-    section {
-      margin-bottom: 2rem;
-      background-color: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    section h2 {
-      color: #0056b3;
+    .hero h2 {
+      color: #0057a8;
+      font-size: 2rem;
       margin-bottom: 1rem;
     }
 
+    .hero p {
+      font-size: 1.2rem;
+      color: #333;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .content {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .content h3 {
+      color: #0057a8;
+      margin-top: 2rem;
+    }
+
     footer {
+      background-color: #0057a8;
+      color: white;
       text-align: center;
       padding: 1rem;
-      background-color: #007BFF;
-      color: white;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Afya RDC</h1>
-    <p>La santé, notre droit. L’information, notre force.</p>
+    <nav>
+      <a href="#mission">Mission</a>
+      <a href="#vision">Vision</a>
+      <a href="#objectifs">Objectifs</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#mission">Mission</a>
-    <a href="#objectifs">Objectifs</a>
-    <a href="#vision">Vision</a>
-    <a href="#engagement">Engagement</a>
-  </nav>
+  <section class="hero">
+    <h2>La santé, notre droit. L’information, notre force.</h2>
+    <p>Bienvenue sur Afya RDC, votre portail numérique dédié à l'information sanitaire accessible et fiable pour tous les citoyens de la République Démocratique du Congo.</p>
+  </section>
 
-  <main>
-    <section id="mission">
-      <h2>Notre Mission</h2>
-      <p>
-        Afya RDC s’engage à promouvoir une meilleure compréhension du système de santé en République Démocratique du Congo, à travers la diffusion d’informations fiables, accessibles et adaptées à la population. Nous visons à réduire les inégalités d’accès à la santé en facilitant l’éducation, la prévention et l’autonomisation des citoyens par le savoir.
-      </p>
-    </section>
+  <section class="content" id="mission">
+    <h3>Notre Mission</h3>
+    <p>Afya RDC vise à lutter contre les inégalités d’accès à l’information sanitaire en RDC en mettant à disposition du grand public une plateforme éducative, fiable et gratuite sur les questions de santé. Notre objectif est de renforcer l’autonomie sanitaire des populations en leur offrant les outils nécessaires pour comprendre, prévenir et réagir face aux problèmes de santé courants.</p>
+  </section>
 
-    <section id="objectifs">
-      <h2>Objectifs spécifiques</h2>
-      <ul>
-        <li>Informer la population sur les maladies courantes, les moyens de prévention et les services disponibles.</li>
-        <li>Offrir un espace éducatif accessible sur le système de santé congolais.</li>
-        <li>Encourager les femmes et les jeunes à prendre des décisions éclairées concernant leur santé.</li>
-        <li>Créer des contenus vulgarisés mais fondés sur des sources médicales fiables.</li>
-        <li>Favoriser une culture de sensibilisation et de responsabilité communautaire autour de la santé.</li>
-      </ul>
-    </section>
+  <section class="content" id="vision">
+    <h3>Notre Vision</h3>
+    <p>Créer un réseau d’éducation santé digital à travers le pays, capable d’atteindre chaque coin du territoire, en particulier les milieux semi-urbains et ruraux, pour bâtir une génération informée, consciente et engagée pour sa propre santé.</p>
+  </section>
 
-    <section id="vision">
-      <h2>Notre vision</h2>
-      <p>
-        Devenir la principale plateforme citoyenne d’information et d’éducation en santé en RDC. À long terme, Afya RDC vise à créer un réseau digital d’éducation santé, accessible dans toutes les provinces, intégrant des contenus multimédias, des campagnes communautaires, et des partenariats locaux et internationaux.
-      </p>
-    </section>
+  <section class="content" id="objectifs">
+    <h3>Nos Objectifs Spécifiques</h3>
+    <ul>
+      <li>Offrir une base de données vulgarisée sur les maladies courantes.</li>
+      <li>Promouvoir la santé des femmes, en particulier en âge de procréer.</li>
+      <li>Sensibiliser sur les gestes simples de prévention.</li>
+      <li>Faciliter l’orientation vers des structures de santé fiables.</li>
+      <li>Combattre la désinformation et les croyances néfastes en matière de santé.</li>
+    </ul>
+  </section>
 
-    <section id="engagement">
-      <h2>Notre engagement militant</h2>
-      <p>
-        Afya RDC s'inscrit dans une démarche citoyenne militante, en dénonçant les inégalités d’accès aux soins, la désinformation sanitaire, et le manque de lisibilité du système de santé pour les populations vulnérables. Nous croyons que l'accès à une information claire, fondée et adaptée est une première étape vers une santé plus équitable.
-      </p>
-    </section>
-  </main>
+  <section class="content" id="contact">
+    <h3>Contact</h3>
+    <p>Une équipe dédiée travaille en coulisses pour mettre à jour le site, écouter vos retours, et répondre à vos besoins d'information. Une boîte de contact sera bientôt disponible.</p>
+  </section>
 
   <footer>
-    &copy; 2025 Afya RDC – Tous droits réservés
+    © 2025 Afya RDC. Tous droits réservés.
   </footer>
+
 </body>
 </html>
