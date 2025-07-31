@@ -20,6 +20,45 @@
       max-width: 1000px;
       margin: auto;
     }
+    /* Menu de navigation */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #0a4a8a;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    .logo {
+      color: white;
+      font-weight: 700;
+      font-size: 1.4rem;
+      cursor: default;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .nav-links li a:hover {
+      color: #83b4f7;
+    }
+    /* Responsive menu simple */
+    @media (max-width: 600px) {
+      .nav-links {
+        display: none; /* On cache les liens sur petit écran pour l’instant */
+      }
+    }
+
     header {
       text-align: center;
       padding-bottom: 20px;
@@ -128,16 +167,25 @@
 </head>
 <body>
   <header>
+    <nav class="navbar">
+      <div class="logo">Afya RDC</div>
+      <ul class="nav-links">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#rubriques">Rubriques</a></li>
+        <li><a href="#temoignages">Témoignages</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
     <h1>Afya RDC</h1>
     <p class="slogan">La santé, notre droit. L’information, notre force.</p>
   </header>
   <main>
-    <section>
+    <section id="accueil">
       <h2>Bienvenue sur Afya RDC</h2>
       <p>Afya RDC est une plateforme digitale dédiée à la sensibilisation, l’éducation et l’accompagnement de la population congolaise en matière de santé. Nous nous adressons particulièrement aux femmes en âge de procréer, souvent les plus vulnérables face aux maladies et aux difficultés d’accès aux soins.</p>
       <p>Dans un contexte où l’accès à une information médicale fiable est un défi majeur, notre mission est simple mais essentielle : rendre la santé accessible à tous, en fournissant des contenus clairs, validés et adaptés aux réalités locales.</p>
     </section>
-    <section>
+    <section id="rubriques">
       <h2>Explorez nos rubriques principales</h2>
       <div class="rubriques">
         <div class="rubrique-card">
@@ -158,14 +206,14 @@
         </div>
       </div>
     </section>
-    <section>
+    <section id="temoignages">
       <h2>Témoignages et actualités</h2>
       <blockquote class="temoignage">
         « Grâce à Afya RDC, j’ai compris l’importance du suivi de grossesse. Aujourd’hui, je sais quand consulter et comment prendre soin de mon bébé. »<br />– Aline, maman de Kinshasa
       </blockquote>
       <p>Restez informés des dernières campagnes de santé, événements et conseils saisonniers.</p>
     </section>
-    <section class="cta">
+    <section id="contact" class="cta">
       <a href="#" class="btn-primary">Contactez-nous pour contribuer</a>
     </section>
   </main>
