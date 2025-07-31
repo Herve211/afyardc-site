@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Afya RDC - La santé, notre droit. L’information, notre force.</title>
+  <style>
+    /* Reset simple */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f9fafc;
+      color: #1c1c1c;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    header {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #0a4a8a;
+    }
+    header h1 {
+      color: #0a4a8a;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    header p.slogan {
+      font-style: italic;
+      color: #3a7bd5;
+      font-weight: 500;
+    }
+    main {
+      margin-top: 30px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #0a4a8a;
+      margin-bottom: 15px;
+      border-left: 6px solid #3a7bd5;
+      padding-left: 10px;
+    }
+    /* Rubriques principales en grille */
+    .rubriques {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .rubrique-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: box-shadow 0.3s ease;
+    }
+    .rubrique-card:hover {
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    }
+    .rubrique-card h3 {
+      margin-bottom: 12px;
+      color: #094a8a;
+    }
+    .rubrique-card p {
+      font-size: 0.95rem;
+      color: #3a3a3a;
+    }
+    /* Témoignage */
+    .temoignage {
+      font-style: italic;
+      background: #e8f0fe;
+      padding: 20px;
+      border-left: 4px solid #0a4a8a;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      color: #234a8a;
+    }
+    /* Appel à l’action */
+    .cta {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .btn-primary {
+      background-color: #0a4a8a;
+      color: white;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 28px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-primary:hover {
+      background-color: #06326a;
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.85rem;
+      color: #6b6b6b;
+      border-top: 1px solid #ddd;
+      padding: 15px 0;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .rubriques {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Afya RDC</h1>
+    <p class="slogan">La santé, notre droit. L’information, notre force.</p>
+  </header>
+  <main>
+    <section>
+      <h2>Bienvenue sur Afya RDC</h2>
+      <p>Afya RDC est une plateforme digitale dédiée à la sensibilisation, l’éducation et l’accompagnement de la population congolaise en matière de santé. Nous nous adressons particulièrement aux femmes en âge de procréer, souvent les plus vulnérables face aux maladies et aux difficultés d’accès aux soins.</p>
+      <p>Dans un contexte où l’accès à une information médicale fiable est un défi majeur, notre mission est simple mais essentielle : rendre la santé accessible à tous, en fournissant des contenus clairs, validés et adaptés aux réalités locales.</p>
+    </section>
+    <section>
+      <h2>Explorez nos rubriques principales</h2>
+      <div class="rubriques">
+        <div class="rubrique-card">
+          <h3>Maladies courantes</h3>
+          <p>Fiches complètes sur les maladies comme le paludisme, VIH/SIDA, hypertension, diabète, IST et plus.</p>
+        </div>
+        <div class="rubrique-card">
+          <h3>Santé de la femme</h3>
+          <p>Suivi de grossesse, contraception, santé menstruelle, santé infantile et sensibilisation.</p>
+        </div>
+        <div class="rubrique-card">
+          <h3>Prévention & Conseils</h3>
+          <p>Hygiène, nutrition, premiers secours, santé mentale et recommandations pour une vie saine.</p>
+        </div>
+        <div class="rubrique-card">
+          <h3>Trouver de l’aide</h3>
+          <p>Annuaire des centres de santé, contacts d’urgence et partenaires locaux fiables.</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Témoignages et actualités</h2>
+      <blockquote class="temoignage">
+        « Grâce à Afya RDC, j’ai compris l’importance du suivi de grossesse. Aujourd’hui, je sais quand consulter et comment prendre soin de mon bébé. »<br />– Aline, maman de Kinshasa
+      </blockquote>
+      <p>Restez informés des dernières campagnes de santé, événements et conseils saisonniers.</p>
+    </section>
+    <section class="cta">
+      <a href="#" class="btn-primary">Contactez-nous pour contribuer</a>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Afya RDC – Tous droits réservés.
+  </footer>
+</body>
+</html>
