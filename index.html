@@ -2,138 +2,354 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Afya RDC</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
   <style>
+    /* Reset & Base */
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5f8fb;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
       color: #333;
     }
 
-    header {
-      background-color: #0057a8;
-      color: white;
-      padding: 1rem 2rem;
+    /* Menu de navigation */
+    nav.menu {
+      background-color: #00695c;
+      padding: 0.5em 0;
+    }
+
+    nav.menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav.menu li {
+      margin: 0 1em;
+    }
+
+    nav.menu a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      display: flex;
       align-items: center;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 1.5rem;
+    nav.menu a i {
+      margin-right: 8px;
     }
 
-    nav a {
-      color: white;
-      margin-left: 1.5rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
+    nav.menu a:hover {
       text-decoration: underline;
     }
 
-    .hero {
+    /* Section Hero */
+    section.hero {
+      background: url("https://images.unsplash.com/photo-1588776814546-ec7e5c16f520?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80")
+        center/cover no-repeat;
+      color: #fff;
       text-align: center;
-      padding: 4rem 1rem;
-      background-color: #e8f0fe;
+      padding: 6em 1em;
     }
 
-    .hero h2 {
-      color: #0057a8;
-      font-size: 2rem;
-      margin-bottom: 1rem;
+    section.hero .hero-content {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 2em;
+      border-radius: 8px;
+      display: inline-block;
     }
 
-    .hero p {
-      font-size: 1.2rem;
-      color: #333;
-      max-width: 700px;
-      margin: 0 auto;
+    section.hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
     }
 
-    .content {
-      padding: 2rem 1rem;
-      max-width: 900px;
-      margin: 0 auto;
+    section.hero p {
+      font-size: 1.2em;
+      margin-bottom: 1em;
     }
 
-    .content h3 {
-      color: #0057a8;
-      margin-top: 2rem;
-    }
-
-    footer {
-      background-color: #0057a8;
+    .cta-button {
+      background-color: #ff9800;
       color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 4rem;
+      padding: 0.8em 1.5em;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
     }
 
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 0.5rem 0;
-      }
+    .cta-button:hover {
+      background-color: #e68a00;
+    }
 
-      header {
+    /* Services */
+    section.services {
+      padding: 4em 2em;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    section.services h2 {
+      font-size: 2em;
+      margin-bottom: 1.5em;
+    }
+
+    .service-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2em;
+    }
+
+    .card {
+      background-color: #e0f2f1;
+      padding: 2em;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card i {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+      color: #00796b;
+    }
+
+    /* Section Contact */
+    section.contact {
+      padding: 3em 2em;
+      background-color: #f0fdfd;
+      max-width: 600px;
+      margin: 2em auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    section.contact h2 {
+      text-align: center;
+      margin-bottom: 1em;
+      color: #00695c;
+    }
+
+    section.contact form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    section.contact label {
+      margin: 0.8em 0 0.3em;
+      font-weight: 600;
+    }
+
+    section.contact input,
+    section.contact textarea {
+      padding: 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+      resize: vertical;
+    }
+
+    section.contact button {
+      margin-top: 1.5em;
+      padding: 0.75em;
+      background-color: #00695c;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    section.contact button:hover {
+      background-color: #004d40;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      padding: 40px 0;
+      margin-top: 60px;
+      font-family: sans-serif;
+    }
+
+    footer > div {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 0 20px;
+    }
+
+    footer h3,
+    footer h4 {
+      color: #f1c40f;
+      margin-bottom: 10px;
+    }
+
+    footer p,
+    footer a {
+      margin: 5px 0;
+      color: white;
+      text-decoration: none;
+      font-size: 0.9em;
+      display: block;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    footer .social-icons a {
+      margin-right: 15px;
+      font-size: 1.5em;
+      color: white;
+      transition: color 0.3s ease;
+    }
+
+    footer .social-icons a:hover {
+      color: #f1c40f;
+    }
+
+    footer .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      border-top: 1px solid #fff2;
+      padding-top: 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav.menu ul {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+      }
+      nav.menu li {
+        margin: 0.5em 0;
+      }
+      .service-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+      footer > div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      footer div > div {
+        margin-bottom: 20px;
       }
     }
   </style>
 </head>
+
 <body>
-
-  <header>
-    <h1>Afya RDC</h1>
-    <nav>
-      <a href="#mission">Mission</a>
-      <a href="#vision">Vision</a>
-      <a href="#objectifs">Objectifs</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h2>La santé, notre droit. L’information, notre force.</h2>
-    <p>Bienvenue sur Afya RDC, votre portail numérique dédié à l'information sanitaire accessible et fiable pour tous les citoyens de la République Démocratique du Congo.</p>
-  </section>
-
-  <section class="content" id="mission">
-    <h3>Notre Mission</h3>
-    <p>Afya RDC vise à lutter contre les inégalités d’accès à l’information sanitaire en RDC en mettant à disposition du grand public une plateforme éducative, fiable et gratuite sur les questions de santé. Notre objectif est de renforcer l’autonomie sanitaire des populations en leur offrant les outils nécessaires pour comprendre, prévenir et réagir face aux problèmes de santé courants.</p>
-  </section>
-
-  <section class="content" id="vision">
-    <h3>Notre Vision</h3>
-    <p>Créer un réseau d’éducation santé digital à travers le pays, capable d’atteindre chaque coin du territoire, en particulier les milieux semi-urbains et ruraux, pour bâtir une génération informée, consciente et engagée pour sa propre santé.</p>
-  </section>
-
-  <section class="content" id="objectifs">
-    <h3>Nos Objectifs Spécifiques</h3>
+  <!-- Menu de Navigation -->
+  <nav class="menu">
     <ul>
-      <li>Offrir une base de données vulgarisée sur les maladies courantes.</li>
-      <li>Promouvoir la santé des femmes, en particulier en âge de procréer.</li>
-      <li>Sensibiliser sur les gestes simples de prévention.</li>
-      <li>Faciliter l’orientation vers des structures de santé fiables.</li>
-      <li>Combattre la désinformation et les croyances néfastes en matière de santé.</li>
+      <li><a href="#"><i class="fas fa-home"></i> Accueil</a></li>
+      <li><a href="#"><i class="fas fa-heartbeat"></i> Santé</a></li>
+      <li><a href="#"><i class="fas fa-venus-mars"></i> Santé de la femme</a></li>
+      <li><a href="#"><i class="fas fa-book"></i> Éducation</a></li>
+      <li><a href="#"><i class="fas fa-phone-alt"></i> Contact</a></li>
     </ul>
+  </nav>
+
+  <!-- Section Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Bienvenue sur Afya RDC</h1>
+      <p>Des informations fiables pour une population en meilleure santé.</p>
+      <a href="#" class="cta-button">En savoir plus</a>
+    </div>
   </section>
 
-  <section class="content" id="contact">
-    <h3>Contact</h3>
-    <p>Une équipe dédiée travaille en coulisses pour mettre à jour le site, écouter vos retours, et répondre à vos besoins d'information. Une boîte de contact sera bientôt disponible.</p>
+  <!-- Section Services / Objectifs -->
+  <section class="services">
+    <h2>Nos Objectifs</h2>
+    <div class="service-cards">
+      <div class="card">
+        <i class="fas fa-notes-medical"></i>
+        <h3>Informer</h3>
+        <p>Apporter des connaissances de santé accessibles à tous.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-bullhorn"></i>
+        <h3>Sensibiliser</h3>
+        <p>Favoriser la prévention des maladies les plus fréquentes.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-female"></i>
+        <h3>Cibler la femme</h3>
+        <p>Soutenir la santé des femmes en âge de procréer.</p>
+      </div>
+    </div>
   </section>
 
+  <!-- Section Contact -->
+  <section class="contact">
+    <h2>Contactez-nous</h2>
+    <form id="contactForm" action="https://formspree.io/f/mlezgrja" method="POST">
+      <label for="name">Nom complet :</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Adresse email :</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message :</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    © 2025 Afya RDC. Tous droits réservés.
+    <div>
+      <div>
+        <h3>Afya RDC</h3>
+        <p>Informer, sensibiliser et éduquer la population congolaise sur les enjeux de santé publique.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><i class="fas fa-envelope"></i> contact@afyardc.org</p>
+        <p><i class="fas fa-phone"></i> +243 123 456 789</p>
+      </div>
+      <div>
+        <h4>Suivez-nous</h4>
+        <p class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Afya RDC. Tous droits réservés.</p>
+    </div>
   </footer>
-
 </body>
 </html>
